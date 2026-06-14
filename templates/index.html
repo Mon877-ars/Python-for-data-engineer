@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
@@ -24,5 +25,7 @@
         </tr>
         {% endfor %}
     </table>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

@@ -4,12 +4,15 @@ import mysql.connector
 
 app = Flask(__name__)
 
+import os
+
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="REMOVED_PASSWORD170105",  # sesuaikan password mysql kamu
-        database="belajar_flask"
+        host=os.environ.get("MYSQLHOST", "localhost"),
+        user=os.environ.get("MYSQLUSER", "root"),
+        password=os.environ.get("MYSQLPASSWORD", "REMOVED_PASSWORD170105"),
+        database=os.environ.get("MYSQLDATABASE", "belajar_flask"),
+        port=int(os.environ.get("MYSQLPORT", 3306))
     )
 
 # Halaman utama - tampilkan semua data
@@ -51,7 +54,8 @@ def hapus(id):
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 @app.route('/tambah', methods=['GET', 'POST'])
 def tambah():
