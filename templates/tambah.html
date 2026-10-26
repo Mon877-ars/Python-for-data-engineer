@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Mahasiswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Tambah Data Mahasiswa</h1>
+    <form method="POST">
+        Nama: <input type="text" name="nama"><br>
+        NIM: <input type="text" name="nim"><br>
+        Jurusan: <input type="text" name="jurusan"><br><br>
+        <button type="submit">Simpan</button>
+    </form>
+    <br>
+    <a href="/">Kembali</a>
+</body>
+</html>
