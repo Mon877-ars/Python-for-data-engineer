@@ -1,0 +1,18 @@
+[
+    {
+        "produk": "Laptop",
+        "harga": 8000000
+    },
+    {
+        "produk": "Mouse",
+        "harga": 250000
+    },
+    {
+        "produk": "Keyboard",
+        "harga": 500000
+    },
+    {
+        "produk": "Monitor",
+        "harga": 2500000
+    }
+]
